@@ -1,4 +1,7 @@
 # Interface File
+/*
+- Create an interface to predefine rules for dependency
+*/
 // Payment.php
 <?php
 namespace App\Interfaces;
@@ -10,6 +13,10 @@ interface Payment {
 }
 
 # Service File (or) Dependency
+/* 
+- Create Dependecy class and implement the interface
+- Write some logic inside this
+*/
 // KBZPay.php
 <?php
 namespace App\Services;
@@ -39,6 +46,9 @@ class AYAPay implements Payment{
 }
 
 # AppServiceProvider File
+/*
+- Register the Interface class to be instanciable from controller class
+*/
 <?php
 namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
@@ -67,6 +77,10 @@ class AppServiceProvider extends ServiceProvider
 }
 
 # Controller File
+/*
+- Inject interface class &
+- call some methods from Dependency via Interface
+*/
 // PaymentController.php
 <?php
 namespace App\Http\Controllers;
