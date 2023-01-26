@@ -1,3 +1,4 @@
+ class AA {
  protected function jobIdAutoIncrement()
     {
         $last_created_job = Job::withTrashed()
@@ -22,3 +23,5 @@
 
         return date('Y').auth()->user()->counter->name.'-J'. $auto_increment_no;
     }
+
+}
