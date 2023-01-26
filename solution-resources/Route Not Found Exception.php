@@ -1,3 +1,4 @@
+<?php
 Route::any('{url}', function(){
     // Redirect A User To The "404 Page" or specific route Laravel
     return redirect('/404');
