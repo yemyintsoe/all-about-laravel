@@ -1,4 +1,5 @@
 # master.blade.php
+<?php
 @php
     function conditions($permission) {
         if(auth()->user()->hasanyrole(['super-admin', 'supervisor', 'technician', 'receptionist']) && auth()->user()->hasAnyPermission(['all-menu', $permission])){
